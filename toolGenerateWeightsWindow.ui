@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>toolGenerateWeightsWindow</class>
+ <widget class="QMainWindow" name="toolGenerateWeightsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="textGenerateMethod">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Способ генерации</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="boxGenerateMethod">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>10</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>До максимального веса</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>До максимального веса</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>До указанного веса</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="textWeightTick">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Шаг довеса</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="boxWeightTick">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>40</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="boxWeightGoal">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>100</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <double>149.990000000000009</double>
+    </property>
+    <property name="value">
+     <double>50.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="textWeightGoal1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>95</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цель довеса (не указывается</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="textWeightGoal2">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>106</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> при довесе до максимального веса)</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="boxMaxKartWeight">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>70</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="textMaxKartWeight">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Максимальный довес на карт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGenerate">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>130</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сгенерировать</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
