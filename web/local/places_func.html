@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RaceHelper (local)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <div>places_func</div>
+    <div>Способ генерации</div>
+    <select>
+        <option value="placeCalcRandom" selected>Случайно</option>
+        <option value="placeCalcAlphabet">По алфавиту</option>
+        <option value="placeCalcAlphabet_rev">По алфавиту, в обратном порядке</option>
+    </select>
+    <div>Максимальное количество картов</div>
+    <input type="number" step="1" pattern="\d+" />
+    <div>Минимальное количество картов</div>
+    <input type="number" step="1" pattern="\d+" />
+    <div>Количество заездов участника</div>
+    <input type="number" step="1" pattern="\d+" />
+    <input type="submit" value="Сгенерировать" onclick="generate()" />
+    </select>
+</body>
+
+<script>
+    function generate() {
+        var gen = document.getElementsByTagName("select")[0].value
+        var maxKarts = document.getElementsByTagName("input")[0].value;
+        var minKarts = document.getElementsByTagName("input")[1].value;
+        var participantRaces = document.getElementsByTagName("input")[2].value;
+        fetch("https://" + window.location.hostname, {
+            method: "POST",
+            body: JSON.stringify({
+                func: gen,
+                maxKarts: maxKarts,
+                minKarts: minKarts,
+                participantRaces: participantRaces
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        }).then((response) => response.json()).then((json) => console.log(json));
+        window.open(url, '_blank').focus();
+    }
+</script>
+
+</html>
